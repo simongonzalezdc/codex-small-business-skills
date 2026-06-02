@@ -50,3 +50,10 @@ After the public URL exists:
 3. Use Google Search Console URL Inspection only if the URL is under a verified
    property you control.
 4. Keep the README useful and specific; thin launch pages tend to underperform.
+
+## Inbound Link Targets
+
+- GitHub awesome lists and skill directories:
+  [`docs/GITHUB_AGGREGATORS.md`](GITHUB_AGGREGATORS.md)
+- Launch/community posts:
+  [`docs/SUBMISSION_KIT.md`](SUBMISSION_KIT.md)

@@ -131,7 +131,9 @@ Do these after the public repo URL is live and the README is final:
 - Product Hunt launch.
 - Hacker News `Show HN`.
 - Dev.to or Hashnode technical writeup.
-- Relevant awesome lists by pull request.
+- Relevant awesome lists by pull request. See
+  [`docs/GITHUB_AGGREGATORS.md`](GITHUB_AGGREGATORS.md) for the current target
+  list and skip rules.
 - AlternativeTo or SaaSHub only if the project is packaged as a user-facing tool
   rather than a developer repo.
 - Personal website/blog link for search indexing.
