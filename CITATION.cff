@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: Codex Small Business Skills
+message: If you use this Codex port, please cite the repository and preserve upstream attribution.
+type: software
+license: Apache-2.0
+authors:
+  - name: Anthropic
+    website: https://www.anthropic.com
+  - name: Simon Gonzalez de Cruz
+repository-code: https://github.com/simongonzalezdc/codex-small-business-skills
+version: 0.3.0-codex.1
+date-released: 2026-06-02
+abstract: Apache-2.0 Codex port of Anthropic's Small Business skills for AI-assisted small business workflows.

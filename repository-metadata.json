@@ -1,0 +1,19 @@
+{
+  "description": "Apache-2.0 Codex port of Anthropic's Small Business skills: AI workflows for cash flow, invoices, CRM, support, marketing, hiring, and weekly business rhythm.",
+  "homepage": "https://github.com/simongonzalezdc/codex-small-business-skills",
+  "topics": [
+    "codex",
+    "codex-skills",
+    "claude-code",
+    "claude-plugin",
+    "ai-agents",
+    "small-business",
+    "smb",
+    "workflow-automation",
+    "business-automation",
+    "crm",
+    "cash-flow",
+    "apache-2-0",
+    "open-source"
+  ]
+}

@@ -1,0 +1,29 @@
+# Codex Small Business Skills
+
+Apache-2.0 Codex port of Anthropic's Small Business skills.
+
+Source:
+- https://github.com/anthropics/knowledge-work-plugins
+
+Core files:
+- README.md: overview, install, use cases, included skills
+- manifest.json: machine-readable package metadata
+- ATTRIBUTION.md: upstream attribution and modifications
+- LICENSE: Apache License 2.0
+- docs/SUBMISSION_KIT.md: launch and directory submission copy
+
+Use cases:
+- small business AI workflows
+- Codex skills
+- Claude Code plugin port
+- cash-flow snapshot
+- invoice follow-up
+- CRM cleanup
+- customer support reply drafting
+- lead triage
+- content strategy
+- hiring packets
+
+Important:
+These skills assist workflows. They do not provide legal, tax, financial,
+accounting, employment, or HR advice.

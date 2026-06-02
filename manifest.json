@@ -1,0 +1,57 @@
+{
+  "name": "small-business-codex-port",
+  "publicationStatus": "local-preview-not-published",
+  "license": "Apache-2.0",
+  "generatedAt": "2026-06-02",
+  "source": {
+    "repository": "https://github.com/anthropics/knowledge-work-plugins",
+    "package": "small-business",
+    "version": "0.3.0",
+    "commit": "181c4f6ff5a246f776027dcd79e2b330b68bf3be",
+    "authorMetadata": "Anthropic",
+    "license": "Apache-2.0"
+  },
+  "codex": {
+    "skillPrefix": "small-business",
+    "defaultInstallRoot": "${CODEX_HOME:-$HOME/.codex}/skills"
+  },
+  "modifications": [
+    "renamed skill directories with the small-business- prefix",
+    "rewrote SKILL.md frontmatter name fields to match Codex-prefixed skill names",
+    "added Codex installer, manifest, audit, and license notes",
+    "excluded private local companion skills and private business data"
+  ],
+  "skills": [
+    "small-business-business-pulse",
+    "small-business-call-list",
+    "small-business-canva-creator",
+    "small-business-cash-flow-snapshot",
+    "small-business-close-month",
+    "small-business-content-strategy",
+    "small-business-contract-review",
+    "small-business-crm-cleanup",
+    "small-business-crm-maintenance",
+    "small-business-customer-pulse",
+    "small-business-customer-pulse-check",
+    "small-business-friday-brief",
+    "small-business-handle-complaint",
+    "small-business-invoice-chase",
+    "small-business-job-post-builder",
+    "small-business-lead-triage",
+    "small-business-margin-analyzer",
+    "small-business-monday-brief",
+    "small-business-month-end-prep",
+    "small-business-month-heads-up",
+    "small-business-plan-payroll",
+    "small-business-price-check",
+    "small-business-quarterly-review",
+    "small-business-review-contract",
+    "small-business-run-campaign",
+    "small-business-sales-brief",
+    "small-business-smb-onboard",
+    "small-business-smb-router",
+    "small-business-tax-prep",
+    "small-business-tax-season-organizer",
+    "small-business-ticket-deflector"
+  ]
+}
