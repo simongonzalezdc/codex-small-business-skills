@@ -1,0 +1,14 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: docker
+    container:
+      image: koalaman/shellcheck-alpine:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shellcheck
+        run: |
+          find . -name "*.sh" -not -path "./.git/*" | xargs shellcheck || true
