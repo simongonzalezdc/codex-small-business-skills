@@ -6,9 +6,11 @@ jobs:
   test:
     runs-on: docker
     container:
-      image: koalaman/shellcheck-alpine:latest
+      image: node:22-slim
     steps:
       - uses: actions/checkout@v4
+      - name: Install shellcheck
+        run: apt-get update && apt-get install -y shellcheck
       - name: Shellcheck
         run: |
           find . -name "*.sh" -not -path "./.git/*" | xargs shellcheck || true
