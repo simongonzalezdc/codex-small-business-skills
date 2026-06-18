@@ -1,170 +1,147 @@
 # Codex Small Business Skills
 
-Apache-2.0 Codex port of Anthropic's Small Business skills for owner-operators,
-consultants, agencies, and local businesses that want AI-assisted workflows for
-cash flow, invoices, CRM hygiene, customer support, marketing, hiring, and
-weekly operating rhythm.
+**Apache-2.0 Codex port of Anthropic's Small Business skills for owner-operators, consultants, agencies, and local businesses that want AI-assisted workflows for cash flow, invoices, CRM hygiene, customer support, marketing, hiring, and weekly operating rhythm.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/Codex%20skills-31-success.svg)](manifest.json)
 [![Source](https://img.shields.io/badge/source-Anthropic%20knowledge--work--plugins-lightgrey.svg)](ATTRIBUTION.md)
 
-## Why This Exists
+## What is this?
 
-Anthropic released a strong set of Small Business plugin workflows for Claude.
-This repository makes those workflows easy to install as Codex skills, using the
-`small-business-` prefix expected by Codex skill routing.
+This repository provides 31 ready-to-use AI agent skills (or "plugins") for [Codex](https://openai.com/index/introducing-codex/). They are ported from Anthropic's public `knowledge-work-plugins` repository and adapted for Codex's skill routing system. Each skill is a self-contained workflow designed to assist with a specific small business operational task, from generating cash flow reports to drafting customer complaint responses. They are designed to be practical, approval-gated tools that augment—not replace—the business owner's judgment.
 
-Use it when you want AI agents to help a small business owner with practical,
-approval-gated work:
+## Features
 
-- cash-flow snapshots and payroll readiness
-- overdue invoice follow-up drafts
-- month-end close prep and tax-season organization
-- lead prioritization and call lists
-- CRM cleanup and customer pulse checks
-- complaint response drafting
-- content strategy and campaign planning
-- hiring packets and contract review support
+*   **31 Specialized Skills:** Covers core business functions including finance, sales, customer support, HR, and marketing.
+*   **Practical & Safe:** Skills pause for user approval before taking actions involving money, customers, contracts, or external publishing.
+*   **Easy Installation:** A single script installs all skills to your local Codex environment.
+*   **Codex-Native:** Skill directories and metadata are prefixed (`small-business-`) for correct routing within Codex.
+*   **Well-Documented:** Each skill includes a `SKILL.md` with purpose, inputs, and workflow instructions.
+*   **Open Source:** Distributed under the permissive Apache 2.0 license.
 
-## Keywords
+## Installation
 
-Codex skills, Claude Code skills, Claude plugin port, small business AI agents,
-AI workflow automation, SMB automation, owner-operator tools, business pulse,
-cash flow forecast, invoice chase, CRM cleanup, customer support automation,
-lead triage, content strategy, Apache-2.0 AI skills.
+### Prerequisites
 
-## Source
+*   A working installation of [Codex](https://github.com/openai/codex) (CLI or IDE integration).
+*   `bash` and standard Unix utilities (`cp`, `chmod`, etc.).
 
-This port is derived from Anthropic's public `knowledge-work-plugins`
-repository:
+### Install from Repository
 
-- Source repository: `https://github.com/anthropics/knowledge-work-plugins`
-- Source package: `small-business`
-- Source version: `0.3.0`
-- Source commit used: `181c4f6ff5a246f776027dcd79e2b330b68bf3be`
-- Source license: Apache License 2.0
-- Codex preview regenerated: `2026-06-02`
-
-## What Changed From Upstream
-
-- Copied the public `small-business/skills/*` folders into this Codex preview.
-- Renamed each skill directory with the `small-business-` prefix.
-- Rewrote each `SKILL.md` frontmatter `name:` field to match the Codex-prefixed
-  directory name.
-- Added Codex-focused wrapper files: installer, manifest, audit, and license
-  notes.
-
-No private local companion skills, business context, lead queues, CRM exports,
-credentials, logs, or generated work products are included.
-
-## License
-
-This project is distributed under Apache License 2.0. See [LICENSE](LICENSE).
-
-Apache-2.0 permits use, modification, and redistribution, subject to the license
-terms. The Codex-specific modifications are documented in
-[LICENSE-REVIEW.md](LICENSE-REVIEW.md) and
-[CODEX_PORT_AUDIT_2026-06-02.md](CODEX_PORT_AUDIT_2026-06-02.md).
-
-Anthropic, Claude, Codex, QuickBooks, HubSpot, Canva, PayPal, Stripe, Square,
-DocuSign, Google, Microsoft, Slack, Shopify, and Teams are used descriptively.
-This port is unofficial and is not endorsed by Anthropic unless Anthropic says
-otherwise.
-
-## Install Locally
-
-From this folder:
+Clone the repository and run the installer script:
 
 ```bash
+git clone https://github.com/simon/codex-small-business-skills.git
+cd codex-small-business-skills
 ./scripts/install-codex-skills.sh
 ```
 
-By default this copies skills into:
+This copies all skill directories into `~/.codex/skills/`.
 
-```text
-~/.codex/skills
-```
+### Custom Installation Path
 
-Override the destination with `CODEX_HOME`:
+Override the default location with the `CODEX_HOME` environment variable:
 
 ```bash
-CODEX_HOME=/tmp/codex-home ./scripts/install-codex-skills.sh
+CODEX_HOME=/path/to/your/codex-home ./scripts/install-codex-skills.sh
 ```
 
-Dry run:
+### Dry Run
+
+To see what would be copied without making changes:
 
 ```bash
 DRY_RUN=1 ./scripts/install-codex-skills.sh
 ```
 
-## Quick Test
+## Quick Start
 
-After installation, ask Codex something that should trigger one of the skills:
+After installation, start a Codex session and issue a prompt that should trigger a skill. Codex's routing will match your intent to the appropriate `small-business-*` skill.
 
-```text
-Prioritize my small business leads.
-```
+**Example Prompts:**
 
-or:
+1.  **Financial Health Check:**
+    > "Help me understand whether I can make payroll this month."
 
-```text
-Help me understand whether I can make payroll this month.
-```
+2.  **Sales Operations:**
+    > "Prioritize my small business leads from this spreadsheet."
 
-Codex should route to a `small-business-*` skill and ask for whatever connector,
-file, or CSV context is needed. The skills are designed to pause before actions
-that touch customers, money, contracts, CRM records, or external publishing.
+3.  **Customer Support:**
+    > "Draft a polite response to this angry customer complaint about a late delivery."
 
-## Included Skills
+The skill will ask for necessary context (e.g., a CSV file, specific numbers, or a text description) and then guide you through the workflow, presenting outputs for your review and approval.
 
-This preview includes 31 Codex-prefixed skills:
+## Usage
 
-- `small-business-business-pulse`
-- `small-business-call-list`
-- `small-business-canva-creator`
-- `small-business-cash-flow-snapshot`
-- `small-business-close-month`
-- `small-business-content-strategy`
-- `small-business-contract-review`
-- `small-business-crm-cleanup`
-- `small-business-crm-maintenance`
-- `small-business-customer-pulse`
-- `small-business-customer-pulse-check`
-- `small-business-friday-brief`
-- `small-business-handle-complaint`
-- `small-business-invoice-chase`
-- `small-business-job-post-builder`
-- `small-business-lead-triage`
-- `small-business-margin-analyzer`
-- `small-business-monday-brief`
-- `small-business-month-end-prep`
-- `small-business-month-heads-up`
-- `small-business-plan-payroll`
-- `small-business-price-check`
-- `small-business-quarterly-review`
-- `small-business-review-contract`
-- `small-business-run-campaign`
-- `small-business-sales-brief`
-- `small-business-smb-onboard`
-- `small-business-smb-router`
-- `small-business-tax-prep`
-- `small-business-tax-season-organizer`
-- `small-business-ticket-deflector`
+This collection of skills is designed to be used on-demand within your Codex agent workflow. You invoke them through natural language prompts. Below are practical examples mapped to common business needs.
+
+### Daily/Weekly Rhythm
+
+*   **Monday Planning:** "What should I focus on this week? Review my open invoices and leads."
+*   **Friday Review:** "Summarize what happened in my business this week, including cash flow changes."
+
+### Finance & Operations
+
+*   **Cash Flow Snapshot:** "Give me a cash flow snapshot for the next 30 days based on these pending invoices and recurring expenses."
+*   **Month-End Close Prep:** "Help me prepare for month-end close. What documents do I need to gather?"
+*   **Tax Season Organizer:** "Help me organize my receipts and expenses for the tax year."
+
+### Sales & Marketing
+
+*   **Lead Triage:** "Look at these 10 new leads from the contact form and tell me which one I should call first."
+*   **Content Strategy:** "Suggest a content calendar for the next month focused on our new service offering."
+*   **Review a Contract:** "Summarize the key obligations and payment terms in this vendor contract PDF."
+
+### Customer & CRM
+
+*   **CRM Cleanup:** "Help me identify and merge duplicate contacts in this CSV export from HubSpot."
+*   **Customer Pulse Check:** "Analyze the sentiment of these recent support tickets and highlight any recurring themes."
+*   **Handle a Complaint:** "Draft a professional response to this customer complaint, offering a 10% discount on their next order."
+
+### Hiring & Team
+
+*   **Job Post Builder:** "Create a job posting for a part-time bookkeeper, emphasizing flexibility."
+*   **SMB Onboard:** "Generate an onboarding checklist for a new freelance graphic designer."
+
+## FAQ
+
+**Q: Do I need an Anthropic API key or Claude subscription to use these?**
+**A:** No. These are *skill definitions* (prompts and workflows) that operate within your Codex environment. The underlying LLM is provided by the Codex runtime you have configured.
+
+**Q: Are these skills officially supported by Anthropic or OpenAI?**
+**A:** This is an **unofficial, community port**. It is derived from Anthropic's open-source `knowledge-work-plugins` repository and adapted for Codex. It is not endorsed by either company.
+
+**Q: Can I modify the skills for my specific business?**
+**A:** Yes. The Apache 2.0 license permits modification. We recommend copying a skill folder (e.g., `small-business-invoice-chase/`), renaming it, and editing the `SKILL.md` file. Please see the [CONTRIBUTING.md](CONTRIBUTING.md) guide.
+
+**Q: What's the difference between `small-business-customer-pulse` and `small-business-customer-pulse-check`?**
+**A:** They are separate skills from the original source repository, likely with slightly different focuses or input methods. Both are included as-is from the port. You can experiment to see which workflow you prefer.
+
+**Q: Is my business data secure when using these skills?**
+**A:** The skills run locally within your Codex environment. They are prompts that instruct the AI model. You should still follow your organization's security policies and never input highly sensitive credentials or PII directly into prompts. See our [Security Policy](SECURITY.md) for more.
+
+## Contributing
+
+Contributions are welcome! Whether it's fixing a typo in documentation, improving a skill's prompt, or adding a new small business skill.
+
+1.  Please read our [Contributing Guidelines](CONTRIBUTING.md).
+2.  For major changes, please open an issue first to discuss what you would like to change.
+3.  The [SUBMISSION_KIT.md](docs/SUBMISSION_KIT.md) contains information for listing your skill in aggregators.
+
+We follow a standard fork-and-pull request workflow.
+
+## License
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for the full text.
+
+The Codex-specific modifications are documented in:
+*   [LICENSE-REVIEW.md](LICENSE-REVIEW.md)
+*   [CODEX_PORT_AUDIT_2026-06-02.md](CODEX_PORT_AUDIT_2026-06-02.md)
 
 ## Professional Advice Disclaimer
 
-These skills assist with workflows. They do not provide legal, tax, financial,
-accounting, employment, or HR advice. Review outputs yourself and consult a
-qualified professional where appropriate.
+These skills are **workflow assistants**. They do not provide legal, tax, financial, accounting, employment, or HR advice. All outputs should be reviewed by the user. Always consult a qualified professional for decisions involving compliance, law, or significant financial commitments.
 
-## Discoverability
+## Recommended GitHub Topics
 
-Recommended GitHub topics for this repository:
-
-`codex`, `codex-skills`, `claude-code`, `claude-plugin`, `ai-agents`,
-`small-business`, `smb`, `workflow-automation`, `business-automation`,
-`crm`, `cash-flow`, `apache-2-0`, `open-source`
-
-See [docs/SUBMISSION_KIT.md](docs/SUBMISSION_KIT.md) for launch copy,
-directory targets, and submission assets.
+`codex`, `codex-skills`, `claude-code`, `claude-plugin`, `ai-agents`, `small-business`, `smb`, `workflow-automation`, `business-automation`, `crm`, `cash-flow`, `apache-2-0`, `open-source`
