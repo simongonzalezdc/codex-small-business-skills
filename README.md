@@ -1,17 +1,27 @@
 # Codex Small Business Skills
 
-Apache-2.0 Codex port of Anthropic's Small Business skills for owner-operators, consultants, agencies, and local businesses that want AI-assisted workflows for cash flow, invoices, CRM hygiene, customer support, marketing, hiring, and
+Apache-2.0 Codex port of Anthropic-style Small Business skills for cash flow, invoices, CRM, support, marketing, hiring, and weekly business rhythm.
+
+**Who it is for:** Codex users who want SMB owner-operator workflows as skills.
+
+**What you get:** skill packages + port audit docs for Codex harnesses.
 
 ## Quick start
 
-Clone the repository and follow scripts or package docs in-tree for the current install path.
+```bash
+git clone https://github.com/simongonzalezdc/codex-small-business-skills.git
+cd codex-small-business-skills
+# install skills into your Codex skills directory per docs/SUBMISSION_KIT.md
+```
+
+Sibling: [small-business-skills](https://github.com/simongonzalezdc/small-business-skills)
 
 ## Docs
 
-- [LICENSE-REVIEW.md](LICENSE-REVIEW.md)
-- [CODEX_PORT_AUDIT_2026-06-02.md](CODEX_PORT_AUDIT_2026-06-02.md)
-- [docs/SUBMISSION_KIT.md](docs/SUBMISSION_KIT.md)
+- [Submission kit](docs/SUBMISSION_KIT.md)
+- [License review](LICENSE-REVIEW.md)
+- [Port audit](CODEX_PORT_AUDIT_2026-06-02.md)
 
 ## License
 
-See [LICENSE](LICENSE).
+Apache-2.0. See [LICENSE](LICENSE).
