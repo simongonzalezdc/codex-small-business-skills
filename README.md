@@ -1,5 +1,9 @@
 # Codex Small Business Skills
 
+> Codex Small Business Skills is a Codex-oriented skill pack for small-business operations that helps operators using Codex for SMB workflows run small-business recipes (CRM, cash, content) via Codex skills.
+
+**TL;DR:** Codex Small Business Skills — Codex-oriented skill pack for small-business operations. Best for operators using Codex for SMB workflows.
+
 Apache-2.0 Codex port of Anthropic's Small Business skills for owner-operators,
 consultants, agencies, and local businesses that want AI-assisted workflows for
 cash flow, invoices, CRM hygiene, customer support, marketing, hiring, and
@@ -168,3 +172,64 @@ Recommended GitHub topics for this repository:
 
 See [docs/SUBMISSION_KIT.md](docs/SUBMISSION_KIT.md) for launch copy,
 directory targets, and submission assets.
+
+<!-- s-plus-geo:start -->
+
+## What is Codex Small Business Skills?
+
+**Codex Small Business Skills** is a **Codex-oriented skill pack for small-business operations** that helps **operators using Codex for SMB workflows** **run small-business recipes (CRM, cash, content) via Codex skills**.
+
+| | |
+| --- | --- |
+| **Product** | Codex Small Business Skills |
+| **Category** | Codex-oriented skill pack for small-business operations |
+| **Best for** | operators using Codex for SMB workflows |
+| **Not** | a full accounting suite |
+| **Source** | [GitHub](https://github.com/simongonzalezdc/codex-small-business-skills) · [Forgejo](https://git.kyanitelabs.tech/simon/codex-small-business-skills) |
+| **Keywords** | Codex SMB skills, small business agent skills |
+
+## Who it's for
+
+- Primary: operators using Codex for SMB workflows
+- Use when you need to run small-business recipes (CRM, cash, content) via Codex skills
+- Skip if you need a full accounting suite
+
+## FAQ
+
+### What is Codex Small Business Skills?
+
+Codex Small Business Skills is a Codex-oriented skill pack for small-business operations. It helps operators using Codex for SMB workflows run small-business recipes (CRM, cash, content) via Codex skills.
+
+### Who should use Codex Small Business Skills?
+
+operators using Codex for SMB workflows.
+
+### How is Codex Small Business Skills different?
+
+Skills pack for agents — not QuickBooks itself.
+
+### Is Codex Small Business Skills production software?
+
+Treat the README status and release tags as source of truth for maturity. Validate against your own requirements before production use.
+
+## Status
+
+- Maintained as of 2026 on the default branch
+- Prefer release tags when pinning dependencies
+- Report issues on the canonical remote listed above
+
+## Agent surface
+
+- Coding agents: read this README first, then repo docs/`AGENTS.md` if present
+- Prefer machine-readable briefs (`llms.txt`) when the repo ships one
+- MCP or skill entrypoints are documented in-repo when applicable
+
+## Contributing
+
+Issues and PRs welcome on the canonical remote. Keep public docs free of secrets and machine-local paths.
+
+## License
+
+See [LICENSE](LICENSE) in this repository (or package metadata if license is package-only).
+
+<!-- s-plus-geo:end -->
